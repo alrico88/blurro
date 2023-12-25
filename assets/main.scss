@@ -1,10 +1,18 @@
-$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+$font-family-sans-serif: 'Roboto', sans-serif;
+$body-color: #0D0C21;
 
 body, html {
   font-size: 16px;
 }
 
+$primary: $body-color;
+$info: #60B3D7;
+
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+body {
+  background-color: #F8F7F4;
+}
 
 .overflow-y {
   overflow-y: auto;
@@ -20,4 +28,13 @@ body, html {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.icon {
+  vertical-align: middle; 
+  transform: translateY(-5%);
+}
+
+.cursor-hover:hover {
+  cursor: pointer;
 }

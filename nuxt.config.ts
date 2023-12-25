@@ -1,11 +1,12 @@
 export default defineNuxtConfig({
+  ssr: false,
   app: {
     head: {
-      title: "nuxt3-boilerplate",
+      title: "Blurro",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "theme-color", content: "#212121" },
+        { name: "theme-color", content: "#F8F7F4" },
       ],
       htmlAttrs: {
         "data-bs-theme": "light",
@@ -16,20 +17,22 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-icon",
     "@vueuse/nuxt",
-    [
-      "@pinia/nuxt",
-      {
-        autoImports: ["defineStore", "storeToRefs"],
-      },
-    ],
     "@vite-pwa/nuxt",
+    "@nuxtjs/google-fonts",
+    "@nuxtjs/fontaine",
+    "@bootstrap-vue-next/nuxt",
   ],
+  googleFonts: {
+    families: {
+      Roboto: [400, 700],
+    },
+  },
   pwa: {
     registerType: "prompt",
     manifest: {
-      name: "nuxt3-boilerplate",
-      description: "CHANGE THIS",
-      theme_color: "white",
+      name: "Blurro",
+      description: "Apply gaussian blur to any image",
+      theme_color: "#F8F7F4",
       icons: [
         {
           src: "pwa-192x192.png",
