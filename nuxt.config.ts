@@ -7,6 +7,17 @@ export default defineNuxtConfig({
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "theme-color", content: "#F8F7F4" },
+        {
+          name: "google-site-verification",
+          content: "nc0pKffQdhm679g_eXEQhjK-NzBM8ZbyFQLR9ZMeJtc",
+        },
+      ],
+      script: [
+        {
+          src: "https://stats.alrico.es/script.js",
+          "data-website-id": "9ae08788-5a99-41ec-a764-9767077d110a",
+          async: true,
+        },
       ],
       htmlAttrs: {
         "data-bs-theme": "light",
